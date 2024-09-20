@@ -3,6 +3,7 @@ version: 0.2
 phases:
   pre_build:
     commands:
+      - chmod +x gradlew  # Add this line to make the gradlew script executable
       - ./gradlew clean build
       - echo Logging in to Amazon ECR...
       - aws --version
