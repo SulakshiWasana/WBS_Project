@@ -3,8 +3,7 @@ version: 0.2
 phases:
   pre_build:
     commands:
-      - chmod +x gradlew  # Add this line to make the gradlew script executable
-      - ./gradlew clean build
+      - mvn clean install
       - echo Logging in to Amazon ECR...
       - aws --version
       - REPOSITORY_URI=211125707529.dkr.ecr.eu-north-1.amazonaws.com/web-services
